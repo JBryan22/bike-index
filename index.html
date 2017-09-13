@@ -2,6 +2,7 @@
 <html>
   <head>
     <link rel="stylesheet" href="build/css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
@@ -9,15 +10,38 @@
   </head>
   <body>
     <div class="container">
-        <h1>TitleOfSite</h1>
-        <form id="name-of-form">
-          <div class="form-group">
-            <label for="field-id">Enter a number:</label>
-            <input id="field-id" type="number">
-            <button class="btn-success" type="submit">Submit</button>
-          </div>
+        <div class="jumbotron">
+          <h1>Bike Finder</h1>
+        </div>
+
+        <form id="bike-search" class="form-group">
+          <label for="location">Your location</label>
+          <input type="text" name="location" id="location" class="form-control">
+
+          <label for="distance">Distance to search</label>
+          <input type="number" name="distance" id="distance" class="form-control">
+
+          <label for="serial">Serial number</label>
+          <input type="text" name="serial" id="serial" class="form-control">
+
+          <label for="manufacturer">Manufacturer</label>
+          <input type="text" name="manufacturer" id="manufacturer" class="form-control">
+
+          <label for="results-per-page">Results per page</label>
+          <input type="number" name="results-per-page" id="results-per-page" class="form-control">
+
+          <button type="submit" name="button">Submit</button>
+
         </form>
-        <ul id="solution"></ul>
-      </div>
+
+        <div id="map">
+        </div>
+
+        <div class="output">
+
+        </div>
+
+    </div>
+
   </body>
 </html>
